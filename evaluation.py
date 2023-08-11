@@ -3,6 +3,8 @@ from docx import Document
 import RbzRate
 import json
 import RbzRate
+Item = 1
+companyName = 'Takudzwa'
 
 try:
 	filename = 'RbzRate.json'
