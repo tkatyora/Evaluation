@@ -17,3 +17,5 @@ try:
         return Rate
 except FileNotFoundError:
     print('File Not Found')
+except ValueError :
+    print('Invalid Option Selected')

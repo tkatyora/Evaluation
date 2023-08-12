@@ -7,12 +7,12 @@ try:
 				quantity = int(input('Enter Quantity: '))	
 			UnitPrice = float(input('Enter Supplier Unit Price: '))
 			if VatOption == '1':
-				print('VAT INCLUDED')
 				TotalPrice =   UnitPrice * quantity
 				UnitPriceUSD = UnitPrice / Rbz_rate
 				TotalPriceUSD = UnitPriceUSD * quantity
-				print('Unit Price(ZWL)		 Unit Price(USD)		TotalPrice(zwl)')
-				print( f'{str(UnitPrice)}0 		  {str(UnitPriceUSD)}0 	{str(TotalPrice)}0' )
+				print('\nVAT INCLUDED')
+				print('Unit Price(ZWL)		 Unit Price(USD)		TotalPrice(ZWL)			TotalPrice(USD)')
+				print( f'{str(UnitPrice)}0 		  {str(UnitPriceUSD)}0 	{str(TotalPrice)}0			{str(TotalPriceUSD)}0\n' )
 				if products > 1:
 					productCount = productCount + 1
 			elif VatOption == '2':
@@ -21,9 +21,9 @@ try:
 				UnitPriceUSD = UnitPriceVat / Rbz_rate
 				TotalPriceUSD = TotalPrice / Rbz_rate
 				# prices = [['Item','companyName',UnitPrizeVat,UnitPriceUSD,TotalPrice]]
-				print('VAT EXCLUDED')
-				print('Unit Price(ZWL)		Unit Price(USD)			TotalPrice(zwl)')
-				print( f'{str(UnitPriceVat)}0 		{str(UnitPriceUSD)}0 	{str(TotalPrice)}0' )
+				print('\nVAT EXCLUDED')
+				print('Unit Price(ZWL)		 Unit Price(USD)		TotalPrice(ZWL)			TotalPrice(USD)')
+				print( f'{str(UnitPriceVat)}0 		  {str(UnitPriceUSD)}0 	{str(TotalPrice)}0			{str(TotalPriceUSD)}0\n' )
 				if products > 1:
 					productCount = productCount + 1
 				 
