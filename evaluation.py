@@ -83,8 +83,8 @@ try:
 							# 		row_cells[1].text = companyName
 						
 							print('\nVAT INCLUDED')
-							print('Unit Price(ZWL)		 Unit Price(USD)		TotalPrice(ZWL)			TotalPrice(USD)')
-							print( f'{str(UnitPrice)}0 		  {str(UnitPriceUSD)}0 	{str(TotalPrice)}0			{str(TotalPriceUSD)}0\n' )
+							print('Unit Price(ZWL)		 Unit Price(USD)		TotalPrice(ZWL)			')
+							print( f'{str(UnitPrice)}0 		  {str(UnitPriceUSD)}0 	{str(TotalPrice)}0\n' )
 							
 							productCount = productCount + 1
 						elif VatSelection == '2':
@@ -94,12 +94,12 @@ try:
 							TotalPriceUSD = TotalPrice / Rbz_rate
 							# prices = [['Item','companyName',UnitPrizeVat,UnitPriceUSD,TotalPrice]]
 							print('\nVAT INCLUDED')
-							print('Unit Price(ZWL)		 Unit Price(USD)		TotalPrice(ZWL)			TotalPrice(USD)')
-							print( f'{str(UnitPriceVat)}0 		  {str(UnitPriceUSD)}0 	{str(TotalPrice)}0			{str(TotalPriceUSD)}0\n' )
+							print('Unit Price(ZWL)		 Unit Price(USD)		TotalPrice(ZWL)		')
+							print( f'{str(UnitPriceVat)}0 		  {str(UnitPriceUSD)}0 	{str(TotalPrice)}0\n' )
 							productCount = productCount + 1
 					
 					else:
-						print(' Invalid Option Selected') 
+						print(' Invalid Option Selected2') 
 						break
 			else:
 				pass

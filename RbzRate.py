@@ -1,4 +1,5 @@
 import json
+import os
 try:
     def Rate():
         filename = 'RbzRate.json'
@@ -13,9 +14,11 @@ try:
                 json.dump(Rbz_rate, write_file)
         elif changeRate == '2':
             pass
+        else:
+            print('You Have Selected an Invalid Option')
+            os.sys.exit()
 
         return Rate
 except FileNotFoundError:
     print('File Not Found')
-except ValueError :
-    print('Invalid Option Selected')
+    # os.sys.exit()
