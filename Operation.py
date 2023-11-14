@@ -1,6 +1,4 @@
 import os
-from docx import Document
-import docx
 Vat_value = 0.15
 productCount = 0
 Item = 1
@@ -9,7 +7,7 @@ companyName = 'Takudzwa'
 def operation(VatOption,quantity,Rbz_rate,products,productCount):
 	try:
 		if VatOption == '1' or VatOption =='2':
-			UnitPrice = float(input('Enter Supplier Unit Price: '))
+			UnitPrice = float(input('Enter Supplier Unit Price# '))
 			if VatOption == '1':
 				TotalPrice =   UnitPrice * quantity
 				UnitPriceUSD = str(UnitPrice / Rbz_rate)
