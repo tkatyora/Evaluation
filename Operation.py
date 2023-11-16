@@ -1,18 +1,26 @@
+#Mimportimg modules to use 
 import os
+import math
+
+#Variables 
 Vat_value = 0.15
 productCount = 0
 Item = 1
 companyName = 'Takudzwa'
 
+#Actual script
 def operation(VatOption,quantity,Rbz_rate,products,productCount):
 	try:
 		if VatOption == '1' or VatOption =='2':
 			UnitPrice = float(input('Enter Supplier Unit Price# '))
 			if VatOption == '1':
-				TotalPrice =   UnitPrice * quantity
-				UnitPriceUSD = str(UnitPrice / Rbz_rate)
-				TotalPriceUSD = UnitPriceUSD * quantity
-				a = str(UnitPriceUSD).split('')[:3]
+				TotalPrices =   UnitPrice * quantity
+				UnitPriceUSDs = UnitPrice / Rbz_rate
+				TotalPriceUSDS = UnitPriceUSDs * quantity
+				#Rounding of to 2 decimal Places
+				TotalPriceUSD = round(TotalPriceUSDS,2)
+				TotalPrice = round(TotalPrices,2)
+				UnitPriceUSD = round(UnitPriceUSDs,2)
 				print('\nVAT INCLUDED')
 				print('Unit Price(ZWL)		 Unit Price(USD)		TotalPrice(ZWL)	')
 				print( f'{str(UnitPrice)}0 		  {str(UnitPriceUSD)} 	{str(TotalPrice)}0\n' )
@@ -29,8 +37,8 @@ def operation(VatOption,quantity,Rbz_rate,products,productCount):
 				print( f'{str(UnitPriceVat)}0 		  {str(UnitPriceUSD)}0 	{str(TotalPrice)}0			' )
 		else:
 			print(' Invalid Option Selectedd')
-	except ValueError:
-		print('value-2')
+	except Exception as e:
+		print(e)
 
 	return operation
 

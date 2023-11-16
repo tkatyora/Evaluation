@@ -13,7 +13,7 @@ How To use This system after Configurations
 Double Click the Application(shortcut) (Evaluation_Calculator_windows) 
 and Enter the credintials and enjoys
 
-To restart or re-run the program type the followin commnad : python evaluation.py
+To restart or re-run the program type the following commnad : python evaluation.py
 				or 
 close the Application Window and Re Double Click The Applications
 
