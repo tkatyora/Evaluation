@@ -60,9 +60,12 @@ try:
 									quantity = int(input('Enter Quantity# '))
 									UnitPrice = float(input('Supplier Unit Price# '))
 									if VatSelection == '1':
-										TotalPrice =   (UnitPrice * quantity)
-										UnitPriceUSD = UnitPrice / Rbz_rate
-										TotalPriceUSD = TotalPrice / Rbz_rate
+										TotalPrices =   (UnitPrice * quantity)
+										UnitPriceUSDs = UnitPrice / Rbz_rate
+										TotalPriceUSDS = TotalPrice / Rbz_rate
+										TotalPriceUSD = round(TotalPriceUSDS,2)
+										TotalPrice = round(TotalPrices,2)
+										UnitPriceUSD = round(UnitPriceUSDs,2)
 										print('\nVAT INCLUDED')
 										print('Unit Price(ZWL)		 Unit Price(USD)		TotalPrice(ZWL)			')
 										print( f'{str(UnitPrice)}0 		  {str(UnitPriceUSD)}0 	{str(TotalPrice)}0\n' )
